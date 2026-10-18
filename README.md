@@ -18,3 +18,9 @@ Built with [Astro](https://astro.build). Static, fast, Markdown-driven.
 - **Site title/description** — `src/consts.ts`. **Production URL** — `site` in `astro.config.mjs`.
 - **Styling** — `src/styles/global.css` (CSS variables at the top; light/dark follows the OS).
 - **Pages** — `src/pages/` (home, blog, about, projects, RSS at `/rss.xml`).
+
+## More
+
+- **Tags** — add `tags: ['a', 'b']` to a post; pages are generated at `/tags/<tag>/`.
+- **Résumé** — `/resume` is generated from `profile.ts` and prints cleanly to PDF.
+- **Deploy** — `.github/workflows/deploy.yml` publishes to GitHub Pages on push to `main` (enable Pages → "GitHub Actions" in repo settings, and set `site` in `astro.config.mjs`).

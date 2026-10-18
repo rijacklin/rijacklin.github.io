@@ -9,7 +9,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	{profile.bio.map((p) => <p>{p}</p>)}
 	<p>
 		<a href={`mailto:${profile.email}`}>{profile.email}</a>
-		{profile.links.map((l) => <> · <a href={l.href} rel="me noopener">{l.label}</a></>)}
+		{profile.links.map((l) => <> · <a href={l.href} rel="me noopener">{l.label}</a></>)} · <a href="/resume">Résumé</a>
 	</p>
 
 	<h2>Skills</h2>

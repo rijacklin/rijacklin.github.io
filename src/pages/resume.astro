@@ -1,0 +1,60 @@
+---
+import { SITE_TITLE } from '../consts';
+import { education, experience, profile, skills } from '../data/profile';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title={`Résumé | ${SITE_TITLE}`} description={`Résumé of ${profile.name}.`}>
+	<div class="noprint actions">
+		<button onclick="window.print()">Print / save as PDF</button>
+	</div>
+	<h1>{profile.name}</h1>
+	<p class="muted">
+		{profile.role} · {profile.location} · {profile.email}
+		{profile.links.map((l) => <> · {l.href.replace(/^https?:\/\//, '')}</>)}
+	</p>
+
+	<h2>Experience</h2>
+	{
+		experience.map((e) => (
+			<section>
+				<h3>{e.role}, {e.company} <span class="muted">({e.start} – {e.end})</span></h3>
+				<ul>{e.highlights.map((h) => <li>{h}</li>)}</ul>
+			</section>
+		))
+	}
+
+	<h2>Education</h2>
+	{education.map((e) => <p><strong>{e.degree}</strong>, {e.school} <span class="muted">({e.start} – {e.end})</span></p>)}
+
+	<h2>Skills</h2>
+	{skills.map((s) => <p><strong>{s.group}:</strong> {s.items.join(', ')}</p>)}
+</BaseLayout>
+
+<style>
+	.actions {
+		text-align: right;
+	}
+	button {
+		font: inherit;
+		font-size: 0.9rem;
+		padding: 0.3rem 0.8rem;
+		border: 1px solid var(--border);
+		border-radius: 6px;
+		background: var(--surface);
+		color: var(--text);
+		cursor: pointer;
+	}
+	@media print {
+		.noprint,
+		:global(header),
+		:global(footer) {
+			display: none;
+		}
+		:global(body) {
+			background: #fff;
+			color: #000;
+			font-size: 12pt;
+		}
+	}
+</style>

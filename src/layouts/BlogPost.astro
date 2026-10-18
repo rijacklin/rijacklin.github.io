@@ -27,7 +27,7 @@ const { post, readingTime } = Astro.props;
 					)
 				}
 			</p>
-			{post.tags.length > 0 && <ul class="tags">{post.tags.map((t) => <li class="tag">{t}</li>)}</ul>}
+			{post.tags.length > 0 && <ul class="tags">{post.tags.map((t) => <li><a class="tag" href={`/tags/${encodeURIComponent(t)}/`}>{t}</a></li>)}</ul>}
 		</header>
 		<hr />
 		<div class="prose"><slot /></div>

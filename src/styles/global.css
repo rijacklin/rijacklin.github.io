@@ -148,6 +148,13 @@ td {
 	background: var(--surface);
 	line-height: 1.6;
 }
+a.tag {
+	text-decoration: none;
+}
+a.tag:hover {
+	color: var(--accent);
+	border-color: var(--accent);
+}
 .tags {
 	display: flex;
 	flex-wrap: wrap;
