@@ -1,0 +1,41 @@
+---
+interface Props {
+	title: string;
+	description: string;
+	tech: string[];
+	href?: string;
+	repo?: string;
+}
+const { title, description, tech, href, repo } = Astro.props;
+---
+
+<article>
+	<h3>{title}</h3>
+	<p>{description}</p>
+	<ul class="tags">{tech.map((t) => <li class="tag">{t}</li>)}</ul>
+	<p class="links">
+		{href && <a href={href}>Live site ↗</a>}
+		{repo && <a href={repo}>Source ↗</a>}
+	</p>
+</article>
+
+<style>
+	article {
+		padding: 1.25rem;
+		border: 1px solid var(--border);
+		border-radius: 12px;
+		background: var(--surface);
+	}
+	h3 {
+		margin: 0 0 0.4rem;
+	}
+	p {
+		margin: 0 0 0.5rem;
+	}
+	.links {
+		display: flex;
+		gap: 1rem;
+		margin: 0.75rem 0 0;
+		font-size: 0.95rem;
+	}
+</style>
