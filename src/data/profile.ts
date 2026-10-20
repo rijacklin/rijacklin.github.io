@@ -6,7 +6,7 @@ export const profile = {
 	name: 'Richard Jacklin',
 	role: 'Software Developer',
 	tagline: 'I build web applications and write about what I learn along the way.',
-	location: 'Your City, Country',
+	location: 'Sudbury, ON Canada',
 	email: 'rijacklin1@gmail.com',
 	links: [
 		{ label: 'GitHub', href: 'https://github.com/your-username' },
@@ -64,10 +64,10 @@ export const education: {
 	notes?: string;
 }[] = [
 	{
-		school: 'University Name',
-		degree: 'BSc Computer Science',
-		start: '2016',
-		end: '2020',
+		school: 'Athabasca University',
+		degree: 'BSc Computing and Information Systems',
+		start: '2022',
+		end: '2026',
 		notes: 'Optional: thesis, honours, relevant coursework.',
 	},
 ];

@@ -41,8 +41,9 @@ body {
 	margin: 0 auto;
 	padding: 0 1.25rem;
 }
-main {
-	padding: 2.5rem 0 4rem;
+main.container {
+	padding-top: 1.50rem;
+	padding-bottom: 4rem;
 }
 h1,
 h2,
