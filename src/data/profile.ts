@@ -5,24 +5,24 @@
 export const profile = {
 	name: 'Richard Jacklin',
 	role: 'Software Developer',
-	tagline: 'I build web applications and write about what I learn along the way.',
+	tagline: 'TODO',
 	location: 'Sudbury, ON Canada',
 	email: 'rijacklin1@gmail.com',
 	links: [
-		{ label: 'GitHub', href: 'https://github.com/your-username' },
+		{ label: 'GitHub', href: 'https://github.com/rijacklin' },
 		{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/your-username' },
 	],
 	// Paragraphs shown at the top of the About page (plain text).
 	bio: [
-		'Hi, I’m Richard — a software developer who enjoys turning messy problems into simple, maintainable software.',
+		'TODO',
 		'Write a few sentences here about what you do, what you care about, and what you’re looking for.',
 	],
 };
 
 export const skills: { group: string; items: string[] }[] = [
-	{ group: 'Languages', items: ['TypeScript', 'JavaScript', 'Python', 'SQL'] },
+	{ group: 'Languages', items: ['C#', 'TypeScript', 'Python', 'SQL'] },
 	{ group: 'Frontend', items: ['React', 'Astro', 'HTML & CSS', 'Tailwind'] },
-	{ group: 'Backend', items: ['Node.js', 'PostgreSQL', 'REST', 'GraphQL'] },
+	{ group: 'Backend', items: ['Node.js', 'ASP.NET', 'PostgreSQL', 'REST', 'GraphQL'] },
 	{ group: 'Tooling', items: ['Git', 'Docker', 'CI/CD', 'Linux'] },
 ];
 
@@ -35,8 +35,8 @@ export const experience: {
 	highlights: string[];
 }[] = [
 	{
-		company: 'Company Name',
-		role: 'Software Developer',
+		company: 'Athabasca University',
+		role: 'Research Assistant',
 		start: '2022',
 		end: 'Present',
 		summary: 'One sentence on what the team/product does.',
