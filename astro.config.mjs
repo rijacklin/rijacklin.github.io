@@ -6,8 +6,8 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-	// TODO: replace with your real domain once deployed
-	site: 'https://example.com',
+	site: 'https://rijacklin.github.io',
+	base: '/personal-blog',
 	integrations: [mdx(), sitemap()],
 	markdown: {
 		shikiConfig: {
